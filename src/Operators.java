@@ -7,51 +7,31 @@ public static void main(String[] args) {
     String A = args[0];
     String B = args[1];
     String C = args[2];
-    //System.out.println(A);
 
     int A2 = Integer.parseInt(A);
     int B2 = Integer.parseInt(B);
     int C2 = Integer.parseInt(C);
 
-    System.out.println("Первое число "+ A2);
-    System.out.println("Второе число "+ B2);
-    System.out.println("Третье число "+ C2);
+    System.out.println("РџРµСЂРІРѕРµ С‡РёСЃР»Рѕ "+ A2);
+    System.out.println("Р’С‚РѕСЂРѕРµ С‡РёСЃР»Рѕ "+ B2);
 
-    System.out.println( B2 == C2 ?  "второе число равно третьем": A2 == B2 ?
-                                    "Первое число равно второму": A2 == C2 ?
-                                    "Первое число равно третьему":
-                                    "Ни одно из чисел не равно друг другу");
+    System.out.println("РўСЂРµС‚СЊРµ С‡РёСЃР»Рѕ "+ C2);
+
+    System.out.println( B2 == C2    ?   "Р’С‚РѕСЂРѕРµ С‡РёСЃР»Рѕ СЂР°РІРЅРѕ С‚СЂРµС‚СЊРµРј" : A2 == B2
+                                    ?   "РџРµСЂРІРѕРµ С‡РёСЃР»Рѕ СЂР°РІРЅРѕ РІС‚РѕСЂРѕРјСѓ" : A2 == C2
+                                    ?   "РџРµСЂРІРѕРµ С‡РёСЃР»Рѕ СЂР°РІРЅРѕ С‚СЂРµС‚СЊРµРјСѓ":
+                                        "РќРё РѕРґРЅРѕ РёР· С‡РёСЃРµР» РЅРµ СЂР°РІРЅРѕ РґСЂСѓРі РґСЂСѓРіСѓ");
 
     if (A2 > B2 && A2 != C2) {
-        System.out.println("Первое число больше чем второе");
-        System.out.println("И Первое число не равно третьему");
+        System.out.println("РџРµСЂРІРѕРµ С‡РёСЃР»Рѕ Р±РѕР»СЊС€Рµ С‡РµРј РІС‚РѕСЂРѕРµ");
+        System.out.println("Р РџРµСЂРІРѕРµ С‡РёСЃР»Рѕ РЅРµ СЂР°РІРЅРѕ С‚СЂРµС‚СЊРµРјСѓ");
     } else if (A2 == B2) {
-        System.out.println("Первое и второе число равны"); // кого ты хочешь надурить, малец?
+        System.out.println("РџРµСЂРІРѕРµ Рё РІС‚РѕСЂРѕРµ С‡РёСЃР»Рѕ СЂР°РІРЅС‹"); // РєРѕРіРѕ С‚С‹ С…РѕС‡РµС€СЊ РЅР°РґСѓСЂРёС‚СЊ, РјР°Р»РµС†?
     } else if (C2 % B2 == 0) {
-         System.out.println("Третье число кратно второму");
+         System.out.println("РўСЂРµС‚СЊРµ С‡РёСЃР»Рѕ РєСЂР°С‚РЅРѕ РІС‚РѕСЂРѕРјСѓ");
     } else if (A2 > B2){
-         System.out.println("Второе число больше чем Первое");
+         System.out.println("Р’С‚РѕСЂРѕРµ С‡РёСЃР»Рѕ Р±РѕР»СЊС€Рµ С‡РµРј РџРµСЂРІРѕРµ");
     }
 
-
-
-
-//    Scanner in = new Scanner(System.in);
-//    System.out.println("Ввести:");
-//    int n3 = in.nextInt();
-//    System.out.println("result 2 = " + n3);
-
-//        int result1 = 5;
-//        int result2 = result1++;//6
-//        System.out.println("result 2 = " + result2);
-//        System.out.println("result 2 = " + result2);
-//        int result3 = result1 + result2;//11
-//        System.out.println("result 3 = " + result3);
-//        int templ = 0;
-//        if(result1 == result2 && result3 / templ > 0) {
-//            System.out.println("magic");
-//        } else {
-//            System.out.println("Учу делить на 0. Дорого!");
-//        }
     }
 }
