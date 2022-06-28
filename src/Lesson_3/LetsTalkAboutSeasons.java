@@ -1,10 +1,16 @@
 package Lesson_3;
+
+import java.util.Scanner;
+
 //Написать программу, в которой в консоль будет выводится название месяца и сезон, к которму этот месяц
 //относится (написать с помощью if и с помощью switch)
 public class LetsTalkAboutSeasons {
     public static void main(String[] args) {
 
-        int numMonth = 11;
+        Scanner scan = new Scanner(System.in);
+        System.out.println("Введите порядковый номер месяца:");
+        int numMonth = scan.nextInt();
+
         month(numMonth);
     }
     public static void month(int numMonth) {
