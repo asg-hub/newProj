@@ -1,25 +1,12 @@
 package Lesson_3;
 
-//Написать программу, которая приветствует пользователя в зависимости от его пола и возраста (имя, пол и возраст
-//задаются при старте программы)
-//Написать 5 способов создания/получения строки
-//Написать программу, в которой в консоль будет выводится название месяца и сезон, к которму этот месяц
-//относится (написать с помощью if и с помощью switch)
-
-import java.sql.SQLOutput;
-import java.time.Year;
-
-public class timeToPlay {
+public class LetsTalkAboutSeasons {
     public static void main(String[] args) {
-        welcome(); //Приветствие
-        month(); //выводить название месяца
-    }
 
-    public static void month() {
-
-        //Переменные
         int numMonth = 11;
-
+        month(numMonth);
+    }
+    public static void month(int numMonth) {
         sayMonthWithIf(numMonth);
         sayMonthWithSwitch(numMonth);
     }
@@ -96,70 +83,4 @@ public class timeToPlay {
             System.out.println("Нет такой поры года...ошибка ввода");
         }
     }
-    public static void welcome() {
-
-        //задаем параметры
-        int years = 55;
-        String name = "Stas";
-        String pol = "М"; //могут принимать значения "М" или "Ж"
-
-        //переменные
-        String hi;
-        String sHi;
-
-        if ( years <= 12) {
-            hi = getHiYoung(pol);
-            sHi = "привет";
-        } else if (years <= 25) {
-            hi = getHiMiddle(pol);
-            sHi = "возрадуйтесь";
-        } else if (years <= 55) {
-            hi = getHiAdult(pol);
-            sHi = "приветствую";
-        } else {
-            hi = getHiOld(pol);
-            sHi = "здравствуйте";
-        }
-        System.out.println(name + ",");
-        System.out.println(sHi + ", " + hi);
-    }
-    public static String getHiOld(String pol) {
-        if (pol == "М") {
-            return "дедушка";
-        } else if(pol == "Ж") {
-            return "бабушка";
-        } else {
-            return "ошибка ввода значения пол...";
-        }
-    }
-    public static String getHiAdult(String pol) {
-        if (pol == "М") {
-            return "мужчина";
-        } else if (pol == "Ж") {
-            return "женщина";
-        } else {
-            return "ошибка ввода значения пол...";
-        }
-    }
-    public static String getHiMiddle(String pol) {
-        if (pol == "М") {
-            return "молодой человек";
-        } else if (pol == "Ж") {
-            return "девушка";
-        } else {
-            return "ошибка ввода значения пол...";
-        }
-    }
-    public static String getHiYoung(String pol){
-
-        if (pol == "М") {
-            return "мальчик";
-        } else if (pol == "Ж") {
-            return "девочка";
-        } else {
-            return "ошибка ввода значения пол...";
-        }
-
-    }
-
 }
