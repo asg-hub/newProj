@@ -1,5 +1,6 @@
 package Lesson_3;
-
+//Написать программу, в которой в консоль будет выводится название месяца и сезон, к которму этот месяц
+//относится (написать с помощью if и с помощью switch)
 public class LetsTalkAboutSeasons {
     public static void main(String[] args) {
 
