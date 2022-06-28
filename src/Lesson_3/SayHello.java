@@ -1,13 +1,20 @@
 package Lesson_3;
+
+import java.util.Scanner;
+
 //Написать программу, которая приветствует пользователя в зависимости от его пола и возраста (имя, пол и возраст
 //задаются при старте программы)
 public class SayHello {
 
     public static void main(String[] args) {
-        int years = 55;
-        String name = "Stas";
-        String pol = "М"; //могут принимать значения "М" или "Ж"
-       welcome(years, name, pol);
+        Scanner scan = new Scanner(System.in);
+        System.out.println("Введите возраст:");
+        int years = scan.nextInt();
+        System.out.println("Введите имя:");
+        String name = scan.next();
+        System.out.println("Введите пол (могут принимать значения \"М\" или \"Ж\"):");
+        String pol = scan.next();
+        welcome(years, name, pol);
     }
     public static void welcome(int years, String name, String pol) {
 
