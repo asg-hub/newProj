@@ -8,12 +8,14 @@ public class LetsTalkAboutSeasons {
     public static void main(String[] args) {
 
         Scanner scan = new Scanner(System.in);
+
         System.out.println("Введите порядковый номер месяца:");
         int numMonth = scan.nextInt();
 
         month(numMonth);
     }
     public static void month(int numMonth) {
+
         sayMonthWithIf(numMonth);
         sayMonthWithSwitch(numMonth);
     }
