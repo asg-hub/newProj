@@ -1,7 +1,6 @@
 package Lesson_6;
 
 import java.util.Date;
-import java.util.Scanner;
 
 public class NoteMas {
     Note[] notes;

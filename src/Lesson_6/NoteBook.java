@@ -44,6 +44,8 @@ public class NoteBook {
                 noteMas.dictionary(numRec);
             } else if (res == 7) {
                 System.out.println("Хорошо - прощай!");
+                scanner.close();
+
                 break;
             } else {
                 System.out.println("Вы ошиблись - попробуйте снова");
