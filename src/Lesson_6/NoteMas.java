@@ -1,6 +1,7 @@
 package Lesson_6;
 
 import java.util.Date;
+import java.util.Scanner;
 
 public class NoteMas {
     Note[] notes;
@@ -14,6 +15,15 @@ public class NoteMas {
         Note note = new Note();
         note.addCurrentNote(plan);
         this.notes[this.notes.length - 1] = note;
+    }
+
+   void getNumNotes() {
+        if(notes == null) {
+            System.out.println("В книге нет записей!");
+
+        }else {
+            System.out.print(notes.length);
+        }
     }
 
     void sortDesc() {
@@ -78,6 +88,10 @@ public class NoteMas {
     }
 
     void print() {
+        if (notes == null) {
+            System.out.println("В книге нет записей");
+            return;
+        }
         for (int i = 0; i < this.notes.length; i++) {
             if (this.notes[i] == null) {
                 continue;
@@ -85,16 +99,72 @@ public class NoteMas {
             System.out.print(i + ": ");
             this.notes[i].print();
             System.out.println();
-            //System.out.println(this.notes.length);
-//            System.out.print(i + ": ");
-//            System.out.print(this.notes[i].data);
-//            System.out.print(" - ");
-//            System.out.print(this.notes[i].plan);
-//            System.out.println();
+
         }
     }
 
-    void sort() {
-        System.out.println("sorted");
+    void dictionary(int numRec) {
+
+        if (notes == null) {
+            System.out.println("Ошибка. Записная книга пустая");
+            return;
+        }
+
+        if (numRec > notes.length) {
+            System.out.println("Введено слишком больше число записи книги (в книге " + notes.length +  " записей)");
+            return;
+        }
+
+
+        String longString = notes[numRec-1].getPlan();
+
+
+        String[] longStringArr = longString.split(" ");
+        String[] countWords = new String[longStringArr.length];
+
+        int wordInArr;
+
+        for (int i = 0; i < longStringArr.length; i++) {
+
+            wordInArr = 0;
+            String findWord = longStringArr[i];
+
+            if (findIndex(countWords, findWord) != -1) {
+
+                continue;
+            }
+            System.out.print("Слово " + findWord);
+            for (int j = 0; j < longStringArr.length; j++) {
+                if (longStringArr[j].equals(findWord) == true) {
+                    wordInArr += 1;
+
+                }
+                countWords[i] = findWord;
+            }
+
+            System.out.print(" " + wordInArr + " встречается два раза(раз)");
+            System.out.println();
+
+        }
+
+
     }
+
+
+    private static int findIndex(String[] stringArr, String findWord) {
+
+        int result = -1;
+        for (int i = 0; i < stringArr.length; i++) {
+
+            if (stringArr[i] != null && stringArr[i].equals(findWord) == true) {
+                result = i;
+                break;
+            }
+        }
+
+        return result;
+    }
+
 }
+
+

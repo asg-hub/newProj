@@ -14,7 +14,9 @@ public class NoteBook {
             System.out.println("2 - если хотите вывести все записи на экран");
             System.out.println("3 - отсортировать по убыванию даты");
             System.out.println("4 - отсортировать по возрастанию даты");
-            System.out.println("5 - если хотите завершить работу программы");
+            System.out.println("5 - показать количество записей в книге");
+            System.out.println("6 - частотный словарь для указанной строки");
+            System.out.println("7- если хотите завершить работу программы");
             int res = scanner.nextInt();
             if (res == 1) {
                 System.out.println("Ок. Введите запись, которую выхотите добавить в книгу:");
@@ -31,6 +33,16 @@ public class NoteBook {
                 System.out.println("Ок. Сортиркуем по возрастанию даты");
                 noteMas.sortInc();
             } else if (res == 5) {
+                System.out.print("В книге ");
+                noteMas.getNumNotes();
+                System.out.println(" записей ");
+                System.out.println();
+            } else if (res == 6) {
+                Scanner scan3 = new Scanner(System.in);
+                System.out.println("Введите номер записи:");
+                int numRec = scan3.nextInt();
+                noteMas.dictionary(numRec);
+            } else if (res == 7) {
                 System.out.println("Хорошо - прощай!");
                 break;
             } else {
